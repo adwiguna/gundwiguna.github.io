@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Row, Col, Container } from 'reactstrap'
-import { Link } from 'react-router-dom'
+import { Row, Col, Container, Button } from 'reactstrap'
+import { Link as RRLink } from 'react-router-dom'
+import { Link as SLink, animateScroll as scroll } from 'react-scroll'
 
 import pp from '../assets/images/profile.jpg'
 import Profile from './Profile'
@@ -11,15 +12,16 @@ import Portfolios from './Portfolios'
 
 export default class Home extends Component {
   render() {
+    this.skillsRef = null // Create ref object
     return (
       <Container className="home">
-        <Row>
-          <Col className="bg-light py-4 text-center shadow-sm ">
+        <Row className="header-row">
+          <Col className="header-container pb-2 text-center shadow">
             <div className="text-center display-4">Your Really Complete Name</div>
           </Col>
         </Row>
         <Row className="body-column">
-          <Col lg="3" className="bg-primary py-2 shadow">
+          <Col lg="3" className="py-2 shadow side-container">
             <div className="d-flex flex-column align-items-center">
               <div
                 className="profile-picture my-4"
@@ -30,21 +32,26 @@ export default class Home extends Component {
                 }}
               />
               <div className="side-menu py-3 d-flex flex-column align-items-center">
-                <Link to="#">Profile</Link>
-                <Link to="#">Education</Link>
-                <Link to="#">Skills</Link>
-                <Link to="#">Work Experiences</Link>
-                <Link to="#">Portfolios</Link>
+                <SLink smooth to="profile">Profile</SLink>
+                <SLink smooth to="education">Education</SLink>
+                <SLink smooth to="skills">
+                  Skills
+                </SLink>
+                <SLink smooth to="workingexp">Work Experiences</SLink>
+                <SLink smooth to="portfolios">Portfolios</SLink>
               </div>
             </div>
           </Col>
-          <Col lg="9" className="py-4">
+          <Col lg="9" className="py-4 content-container">
             <Container>
-              <Profile />
-              <Educations />
-              <Skills />
-              <WorkingExp />
-              <Portfolios />
+              <Profile id="profile" />
+              <Educations id="education" />
+              <Skills id="skills" />
+              <WorkingExp id="workingexp" />
+              <Portfolios id="portfolios" />
+              <Button size="sm" onClick={() => scroll.scrollToTop()}>
+                To Top
+              </Button>
             </Container>
           </Col>
         </Row>

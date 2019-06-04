@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function Skills() {
+const Skills = ({ id }) => {
   return (
-    <div>
+    <div id={id}>
       <h3>Skills</h3>
       <ul>
         <li>Cooking</li>
@@ -13,3 +13,5 @@ export default function Skills() {
     </div>
   )
 }
+
+export default Skills

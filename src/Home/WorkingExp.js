@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function WorkingExp() {
+export default function WorkingExp({id}) {
   return (
-    <div>
+    <div id={id}>
       <h3>Working Experiences</h3>
       <ul>
         <li>2000 - 2002: Cooking Chef</li>

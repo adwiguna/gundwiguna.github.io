@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function Educations() {
+export default function Educations({id}) {
   return (
-    <div>
+    <div id={id}>
       <h3>Educations</h3>
       <p>
         Don't go to bed, with no price on your head. No, no, don't do it. Fon't do the crime, if you

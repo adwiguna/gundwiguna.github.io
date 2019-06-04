@@ -1,9 +1,9 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 
-export default function Profile() {
+export default function Profile(props) {
   return (
-    <div>
+    <div id={props.id}>
       <h3>Profile</h3>
       <p>
         Have you tried Wheaties? They're whole wheat with all of the bran. Won't you try Wheaties?
