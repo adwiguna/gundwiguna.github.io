@@ -1,10 +1,15 @@
 import React from 'react'
 import Home from './Home/index'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 function App() {
   return (
     <div>
-      <Home />
+      <BrowserRouter>
+        <Switch>
+          <Home />
+        </Switch>
+      </BrowserRouter>
     </div>
   )
 }

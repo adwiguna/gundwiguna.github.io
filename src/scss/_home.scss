@@ -1,0 +1,25 @@
+.home {
+  box-shadow: 0px 0px 10px;
+  .body-column {
+    .profile-picture {
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      background-color: aquamarine;
+      padding: 1rem;
+    }
+    .side-menu {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 500;
+      a {
+        @include transition(all 0.2s);
+        color: white;
+        &:hover {
+          color: #ccc;
+        }
+        text-decoration: none;
+      }
+    }
+  }
+}
