@@ -1,14 +1,18 @@
 import React from 'react'
 
-export default function WorkingExp({id}) {
+export default function WorkingExp({ id }) {
   return (
-    <div id={id}>
+    <div id={id} className="working-exp">
       <h3>Working Experiences</h3>
       <ul>
-        <li>2000 - 2002: Cooking Chef</li>
-        <li>2002 - 2005: Fishing Consultant</li>
-        <li>2007 - 2014: Head of Heart Surgery Department</li>
-        <li>2014 - 2020: Atomic Engineering Research Manager</li>
+        <li>
+          <div className="year">Aug 2018 - Present</div>
+          <div className="list">Technical Associate - BlockchainZoo</div>
+        </li>
+        <li>
+          <div className="year">Sep 2017 - Nov 2017</div>
+          <div className="list">Intern as Staff of Networking and Infrastructure</div>
+        </li>
       </ul>
     </div>
   )
